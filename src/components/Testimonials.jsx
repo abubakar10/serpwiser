@@ -2,8 +2,8 @@ import { useState } from "react";
 
 const testimonials = [
   {
-    name: "John Doe",
-    role: "CEO of Company X",
+    name: "Jhon Doe",
+    role: "CEO, Company",
     text: "SERP Wiser transformed our online presence. Within six months we saw a 150% increase in organic traffic and our leads have never been higher. Highly recommend their team.",
     rating: 5,
   },
@@ -26,13 +26,13 @@ export default function Testimonials() {
   const t = testimonials[index];
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-sky-50 to-white">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="bg-white rounded-2xl shadow-xl border border-slate-200 p-8 md:p-10 relative">
+    <section className="py-20 md:py-28 relative overflow-hidden bg-gradient-to-b from-slate-50/50 via-white to-sky-50/20">
+      <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="bg-white rounded-2xl shadow-section border border-slate-200/80 p-8 md:p-12 relative">
           <button
             type="button"
             onClick={() => setIndex((i) => (i === 0 ? testimonials.length - 1 : i - 1))}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600 transition-colors"
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600 transition-all duration-200 hover:scale-105 shadow-card"
             aria-label="Previous"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -42,17 +42,18 @@ export default function Testimonials() {
           <button
             type="button"
             onClick={() => setIndex((i) => (i === testimonials.length - 1 ? 0 : i + 1))}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600 transition-colors"
+            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600 transition-all duration-200 hover:scale-105 shadow-card"
             aria-label="Next"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
-          <div className="w-16 h-16 rounded-full bg-sky-100 mx-auto mb-6 flex items-center justify-center text-2xl font-bold text-slate-600">
+          <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-sky-500 to-cyan-500 flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white shadow-glow-sky">
             {t.name.charAt(0)}
           </div>
-          <p className="text-slate-700 font-medium mb-1">{t.name}, {t.role}</p>
+          <p className="text-slate-800 font-semibold text-lg mb-1">{t.name}</p>
+          <p className="text-slate-500 text-sm mb-6">{t.role}</p>
           <div className="flex justify-center gap-1 mb-6">
             {Array.from({ length: t.rating }).map((_, i) => (
               <svg key={i} className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
@@ -60,16 +61,16 @@ export default function Testimonials() {
               </svg>
             ))}
           </div>
-          <p className="text-slate-600 leading-relaxed">"{t.text}"</p>
+          <p className="text-slate-600 leading-relaxed text-[15px]">"{t.text}"</p>
         </div>
-        <div className="flex justify-center gap-2 mt-6">
+        <div className="flex justify-center gap-2 mt-8">
           {testimonials.map((_, i) => (
             <button
               key={i}
               type="button"
               onClick={() => setIndex(i)}
-              className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                index === i ? "bg-blue-600" : "bg-slate-300 hover:bg-slate-400"
+              className={`h-2 rounded-full transition-all duration-200 ${
+                index === i ? "w-8 bg-slate-900" : "w-2 bg-slate-300 hover:bg-slate-400"
               }`}
               aria-label={`Testimonial ${i + 1}`}
             />
