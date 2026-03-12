@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const SectionLabel = ({ children }) => (
   <div className="flex items-center gap-3 mb-4">
     <span className="h-px w-8 bg-gradient-to-r from-sky-500 to-cyan-500 rounded-full" />
-    <p className="text-xs font-bold text-slate-500 uppercase tracking-[0.2em]">{children}</p>
+    <p className="text-xs font-bold text-slate-600 uppercase tracking-[0.2em]">{children}</p>
   </div>
 );
 
@@ -89,9 +89,10 @@ export default function CaseStudies() {
           <Link
             to="/case-study"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 text-white font-semibold hover:bg-slate-800 transition-all duration-200 shadow-section hover:-translate-y-0.5"
+            aria-label="View all case studies"
           >
-            View All
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            View all case studies
+            <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </Link>

@@ -44,20 +44,20 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-14">
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center gap-2.5 mb-5">
-              <svg className="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <Link to="/" className="flex items-center gap-2.5 mb-5" aria-label="SERP Wiser home">
+              <svg className="w-7 h-7 text-cyan-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" width="28" height="28">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 13h6V3H3v10zm0 8h6v-6H3v6zm8-18v10h10V3H11zm0 18h10v-6H11v6z" />
               </svg>
               <span className="font-bold text-xl text-white">SERP WISER</span>
             </Link>
-            <p className="text-slate-400 text-[15px] leading-relaxed">Digital marketing that drives results.</p>
+            <p className="text-slate-300 text-[15px] leading-relaxed">Digital marketing that drives results.</p>
           </div>
           <div>
             <h2 className="font-bold text-white mb-5 text-sm uppercase tracking-wider">Company</h2>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.to}>
-                  <Link to={link.to} className="text-slate-400 hover:text-white text-[15px] transition-colors">
+                  <Link to={link.to} className="text-slate-300 hover:text-white text-[15px] transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -69,7 +69,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {serviceLinks.map((link) => (
                 <li key={link.to}>
-                  <Link to={link.to} className="text-slate-400 hover:text-white text-[15px] transition-colors">
+                  <Link to={link.to} className="text-slate-300 hover:text-white text-[15px] transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -81,7 +81,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {companyLinks.map((link) => (
                 <li key={link.to}>
-                  <Link to={link.to} className="text-slate-400 hover:text-white text-[15px] transition-colors">
+                  <Link to={link.to} className="text-slate-300 hover:text-white text-[15px] transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -93,7 +93,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {resourceLinks.map((link) => (
                 <li key={link.to}>
-                  <Link to={link.to} className="text-slate-400 hover:text-white text-[15px] transition-colors">
+                  <Link to={link.to} className="text-slate-300 hover:text-white text-[15px] transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -112,7 +112,7 @@ export default function Footer() {
               <a
                 key={s.name}
                 href={s.href}
-                className="w-11 h-11 rounded-xl bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-slate-700 hover:text-white transition-all duration-200"
+                className="w-11 h-11 rounded-xl bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-slate-700 hover:text-white transition-all duration-200"
                 aria-label={s.name}
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

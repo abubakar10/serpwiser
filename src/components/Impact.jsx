@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const SectionLabel = ({ children }) => (
   <div className="flex items-center gap-3 mb-4">
     <span className="h-px w-8 bg-cyan-400 rounded-full" />
-    <p className="text-xs font-bold text-white/70 uppercase tracking-[0.2em]">{children}</p>
+    <p className="text-xs font-bold text-white/90 uppercase tracking-[0.2em]">{children}</p>
   </div>
 );
 

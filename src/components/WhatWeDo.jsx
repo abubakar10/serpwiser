@@ -4,7 +4,7 @@ import { homeServices, seoSubServices } from "../data/services";
 const SectionLabel = ({ children }) => (
   <div className="flex items-center gap-3 mb-4">
     <span className="h-px w-8 bg-gradient-to-r from-sky-500 to-cyan-500 rounded-full" />
-    <p className="text-xs font-bold text-slate-500 uppercase tracking-[0.2em]">{children}</p>
+    <p className="text-xs font-bold text-slate-600 uppercase tracking-[0.2em]">{children}</p>
   </div>
 );
 
@@ -53,7 +53,7 @@ export default function WhatWeDo() {
           <div className="hidden lg:block w-full min-w-0 rounded-2xl p-6 shadow-section bg-gradient-to-br from-slate-800 via-slate-900 to-indigo-950 border border-slate-700/50 self-start">
             <div className="flex justify-between items-start mb-4">
               <span className="text-sm font-semibold text-slate-200">SEO Services</span>
-              <button type="button" className="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 hover:scale-105 transition-all duration-200 text-slate-300 hover:text-white" aria-label="Close">
+              <button type="button" className="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 hover:scale-105 transition-all duration-200 text-slate-200 hover:text-white" aria-label="Close">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
@@ -64,7 +64,7 @@ export default function WhatWeDo() {
                 <li key={item}>
                   <Link
                     to="/services/seo"
-                    className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-200 border border-transparent hover:border-cyan-500/30"
+                    className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-200 hover:text-white hover:bg-white/10 transition-all duration-200 border border-transparent hover:border-cyan-500/30"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0" />
                     <span>{item}</span>
@@ -95,9 +95,10 @@ export default function WhatWeDo() {
                 <Link
                   to={service.path}
                   className="inline-flex items-center gap-2 font-semibold text-sm transition-all duration-200 text-slate-800 hover:text-sky-600 hover:gap-3 underline-offset-4 hover:underline"
+                  aria-label={`Read more about ${service.title}`}
                 >
-                  Read More
-                  <svg className="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  Read more about {service.title}
+                  <svg className="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </Link>

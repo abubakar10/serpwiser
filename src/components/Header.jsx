@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { navServices } from "../data/services";
 
 const LogoIcon = () => (
-  <svg className="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  <svg className="w-7 h-7 text-cyan-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" width="28" height="28">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 13h6V3H3v10zm0 8h6v-6H3v6zm8-18v10h10V3H11zm0 18h10v-6H11v6z" />
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 11l3 3 6-6" />
   </svg>
@@ -65,7 +65,7 @@ export default function Header() {
                           <div key={col.title} className="p-5 md:py-6 md:px-6 md:border-r border-slate-100 last:border-r-0">
                             <div className="flex items-center gap-2 mb-4">
                               <span className={`h-1 w-6 rounded-full bg-gradient-to-r ${accentBg}`} />
-                              <p className="text-[11px] font-bold text-slate-500 uppercase tracking-[0.2em]">
+                              <p className="text-[11px] font-bold text-slate-600 uppercase tracking-[0.2em]">
                                 {col.title}
                               </p>
                             </div>
@@ -92,7 +92,7 @@ export default function Header() {
                         <p className="text-white font-bold text-base leading-snug mb-2">
                           Need help choosing?
                         </p>
-                        <p className="text-slate-300 text-sm mb-5">
+                        <p className="text-slate-200 text-sm mb-5">
                           Get a free consultation and custom plan.
                         </p>
                         <button
@@ -154,7 +154,7 @@ export default function Header() {
               <Link to="/" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-xl text-slate-600 hover:bg-slate-50 font-medium">
                 Home
               </Link>
-              <p className="px-4 pt-3 text-[11px] font-semibold text-slate-400 uppercase tracking-wider">What we do</p>
+              <p className="px-4 pt-3 text-[11px] font-semibold text-slate-500 uppercase tracking-wider">What we do</p>
               {navServices.flatMap((col) => col.items).map((item) => (
                 <Link
                   key={item.path}

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const SectionLabel = ({ children }) => (
   <div className="flex items-center gap-3 mb-4">
     <span className="h-px w-8 bg-gradient-to-r from-sky-500 to-cyan-500 rounded-full" />
-    <p className="text-xs font-bold text-slate-500 uppercase tracking-[0.2em]">{children}</p>
+    <p className="text-xs font-bold text-slate-600 uppercase tracking-[0.2em]">{children}</p>
   </div>
 );
 
@@ -68,9 +68,10 @@ export default function HowWeWork() {
         <Link
           to="/contact"
           className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 text-white font-semibold hover:bg-slate-800 transition-all duration-200 text-sm mb-14 shadow-lg shadow-slate-900/20"
+          aria-label="View all services and contact us"
         >
-          View All
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          View all services and contact us
+          <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>
         </Link>
@@ -87,15 +88,16 @@ export default function HowWeWork() {
                       <span className="text-white [&_svg]:stroke-current">{step.icon}</span>
                     </div>
 
-                    <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Step {step.num}</p>
+                    <p className="text-xs font-bold text-slate-600 uppercase tracking-wider mb-1">Step {step.num}</p>
                     <h3 className="text-xl font-bold text-slate-900 mb-3">{step.title}</h3>
                     <p className="text-slate-600 text-[15px] leading-relaxed mb-6 flex-1">{step.description}</p>
                     <Link
                       to="/contact"
                       className="inline-flex items-center gap-2 text-slate-900 font-semibold text-sm hover:gap-3 transition-all duration-200 group/link"
+                      aria-label={`Read more about ${step.title} and contact us`}
                     >
-                      Read More
-                      <svg className="w-4 h-4 group-hover/link:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      Read more about {step.title}
+                      <svg className="w-4 h-4 group-hover/link:translate-x-0.5 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
                     </Link>

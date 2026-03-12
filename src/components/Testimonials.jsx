@@ -54,7 +54,7 @@ export default function Testimonials() {
             {t.name.charAt(0)}
           </div>
           <p className="text-slate-800 font-semibold text-lg mb-1">{t.name}</p>
-          <p className="text-slate-500 text-sm mb-6">{t.role}</p>
+          <p className="text-slate-600 text-sm mb-6">{t.role}</p>
           <div className="flex justify-center gap-1 mb-6">
             {Array.from({ length: t.rating }).map((_, i) => (
               <svg key={i} className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">

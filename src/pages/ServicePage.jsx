@@ -30,7 +30,7 @@ export default function ServicePage() {
         <div className="max-w-md mx-auto px-4 text-center">
           <h1 className="text-3xl font-bold text-slate-800 mb-4">Service not found</h1>
           <Link to="/" className="inline-flex items-center gap-2 text-sky-600 font-semibold hover:underline">
-            Back to Home
+            Back to SERP Wiser home
             <ArrowIcon />
           </Link>
         </div>
@@ -46,7 +46,7 @@ export default function ServicePage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_100%,rgba(255,255,255,0.1),transparent)]" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="mb-6" aria-label="Breadcrumb">
-            <Link to="/" className="text-white/80 hover:text-white text-sm font-medium transition-colors">Home</Link>
+            <Link to="/" className="text-white/90 hover:text-white text-sm font-medium transition-colors">Home</Link>
             <span className="mx-2 text-white/60">/</span>
             <span className="text-white font-medium">{service.title}</span>
           </nav>
@@ -115,7 +115,7 @@ export default function ServicePage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_70%_50%,rgba(6,182,212,0.15),transparent)]" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 id="service-cta-heading" className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to get started?</h2>
-          <p className="text-slate-300 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-slate-200 text-lg mb-8 max-w-xl mx-auto">
             Let&apos;s discuss how we can help you achieve your goals with {service.title}.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -142,8 +142,9 @@ export default function ServicePage() {
           <Link
             to="/#what-we-do"
             className="inline-flex items-center gap-2 text-slate-600 hover:text-slate-900 font-medium transition-colors"
+            aria-label="Back to all services on homepage"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
             Back to all services

@@ -4,7 +4,7 @@ import { expertiseServices } from "../data/services";
 const SectionLabel = ({ children }) => (
   <div className="flex items-center gap-3 mb-4">
     <span className="h-px w-8 bg-gradient-to-r from-sky-500 to-cyan-500 rounded-full" />
-    <p className="text-xs font-bold text-slate-500 uppercase tracking-[0.2em]">{children}</p>
+    <p className="text-xs font-bold text-slate-600 uppercase tracking-[0.2em]">{children}</p>
   </div>
 );
 
@@ -20,7 +20,7 @@ const ImageSectionCard = ({ gradient, title, subtitle, icon }) => (
       </div>
       <div className="relative mt-auto">
         <h3 className="text-white/90 font-bold text-lg">{title}</h3>
-        <p className="text-white/70 text-sm mt-0.5">{subtitle}</p>
+        <p className="text-white/90 text-sm mt-0.5">{subtitle}</p>
       </div>
     </div>
   </div>

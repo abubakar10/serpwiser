@@ -54,7 +54,7 @@ export default function Hero() {
             <h1 id="hero-heading" className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.1] tracking-tight">
               Digital marketing that drives
             </h1>
-            <p className="mt-6 text-lg text-slate-300 max-w-xl leading-relaxed">
+            <p className="mt-6 text-lg text-slate-200 max-w-xl leading-relaxed">
               We help brands grow with data-driven strategies across SEO, content marketing, and paid channels. Get more organic traffic, qualified leads, and revenue.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-3 max-w-lg">

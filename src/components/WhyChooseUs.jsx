@@ -1,7 +1,7 @@
 const SectionLabel = ({ children }) => (
   <div className="flex items-center gap-3 mb-4">
     <span className="h-px w-8 bg-gradient-to-r from-sky-500 to-cyan-500 rounded-full" />
-    <p className="text-xs font-bold text-slate-500 uppercase tracking-[0.2em]">{children}</p>
+    <p className="text-xs font-bold text-slate-600 uppercase tracking-[0.2em]">{children}</p>
   </div>
 );
 

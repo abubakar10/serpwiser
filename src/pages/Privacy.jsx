@@ -7,7 +7,7 @@ export default function Privacy() {
   return (
     <main className="pt-24 pb-16" aria-labelledby="privacy-heading">
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="text-blue-600 hover:underline text-sm mb-6 inline-block">← Back to Home</Link>
+        <Link to="/" className="text-blue-600 hover:underline text-sm mb-6 inline-block">← Back to SERP Wiser home</Link>
         <h1 id="privacy-heading" className="text-4xl font-bold text-slate-800 mb-2">Privacy Policy</h1>
         <p className="text-slate-600 mb-8">Last updated: 2026.</p>
         <div className="prose prose-slate max-w-none text-slate-600 space-y-6">
