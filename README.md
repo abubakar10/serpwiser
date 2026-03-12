@@ -15,9 +15,16 @@ Digital marketing agency website built with React, Tailwind CSS, and Vite. Fully
 ## SEO
 
 - **Per-route meta**: Each page has a unique `<title>`, `<meta name="description">`, and canonical URL via `react-helmet-async`.
-- **Open Graph & Twitter**: Shared links get correct title, description, and image (set `VITE_SITE_URL` and add `/public/og-image.png` for best results).
+- **Open Graph & Twitter**: Shared links get correct title, description, and image (set `VITE_SITE_URL` and add `public/og-image.webp` for best results and PageSpeed next-gen image score).
 - **Structured data**: Home has Organization + WebSite schema; service pages have BreadcrumbList + Service schema.
 - **Sitemap & robots**: `public/sitemap.xml` and `public/robots.txt` are included. For a custom domain, set **Build environment variable** in Netlify: `VITE_SITE_URL=https://yourdomain.com` and update the domain in `public/sitemap.xml` and `public/robots.txt` to match.
+
+## Performance (PageSpeed)
+
+- **Route-level code splitting**: Pages are lazy-loaded so the initial bundle is smaller; only the current route’s JS is loaded first.
+- **Vendor chunks**: React, React DOM, React Router, and React Helmet are split into separate cacheable chunks.
+- **Fonts**: Google Fonts are preconnected and preloaded with `display=swap` so text stays visible during load.
+- **Build**: Production build uses esbuild minification and CSS minification. Add `public/og-image.webp` (e.g. 1200×630) for the “Serve images in next-gen formats” audit.
 
 ## Tech Stack
 

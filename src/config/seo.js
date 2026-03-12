@@ -5,7 +5,7 @@ export const SITE_URL = import.meta.env.VITE_SITE_URL || "https://serpwiser.com"
 export const SITE_NAME = "SERP Wiser";
 export const DEFAULT_DESCRIPTION =
   "SERP Wiser delivers data-driven digital marketing: SEO, content marketing, social media, PPC, and web design. Grow traffic, leads, and revenue.";
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.webp`;
 
 export const ROUTE_META = {
   "/": {

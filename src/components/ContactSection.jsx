@@ -134,6 +134,7 @@ export default function ContactSection() {
                 type="submit"
                 disabled={status === "submitting"}
                 className="w-full py-4 rounded-xl bg-gradient-to-r from-slate-800 to-slate-900 text-white font-bold hover:from-slate-700 hover:to-slate-800 transition-all duration-200 shadow-section disabled:opacity-70 disabled:cursor-not-allowed"
+                aria-label={status === "submitting" ? "Sending message" : "Send message"}
               >
                 {status === "submitting" ? "Sending..." : "Send Message"}
               </button>

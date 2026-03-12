@@ -45,6 +45,7 @@ export default function Header() {
                 className="relative flex items-center gap-1.5 px-4 py-2.5 text-slate-600 hover:text-slate-900 font-medium text-[15px] transition-colors after:absolute after:left-4 after:right-4 after:bottom-1.5 after:h-px after:bg-slate-900 after:scale-x-0 after:origin-center after:transition-transform after:duration-200 hover:after:scale-x-100 data-[open]:after:scale-x-100"
                 aria-expanded={dropdownOpen}
                 aria-haspopup="true"
+                aria-label="Open services menu"
                 data-open={dropdownOpen || undefined}
               >
                 What we do

@@ -70,6 +70,7 @@ export default function Hero() {
                 type="button"
                 onClick={handleStart}
                 className="px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-500 text-slate-900 font-bold hover:from-cyan-400 hover:to-sky-400 transition-all duration-200 shadow-glow-cyan hover:-translate-y-0.5 shrink-0"
+                aria-label="Get started and go to contact"
               >
                 Get Started
               </button>
