@@ -9,10 +9,18 @@
     <meta name="description" content="SERP Wiser - Digital marketing that drives. SEO, content marketing, social media, PPC, and web design. Grow traffic, leads, and revenue." />
     <meta name="keywords" content="digital marketing, SEO agency, content marketing, PPC, social media marketing, web design, SERP Wiser" />
     <meta name="robots" content="index, follow" />
+    <style>
+      /* Critical CSS for first paint - avoids FOUC when main CSS loads async */
+      html{scroll-behavior:smooth}
+      body{margin:0;font-family:"Plus Jakarta Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;color:#0f172a;background:#fff}
+      #root{min-height:100vh;display:flex;flex-direction:column}
+      .skip-link{position:absolute;top:-100px;left:50%;transform:translateX(-50%);z-index:9999;padding:.75rem 1.5rem;background:#0f172a;color:#fff;font-weight:600;border-radius:.5rem}
+      .skip-link:focus{top:1rem;outline:2px solid #0ea5e9;outline-offset:2px}
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" as="style" />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" /></noscript>
     <title>SERP Wiser | Digital Marketing That Drives</title>
   </head>
   <body>
