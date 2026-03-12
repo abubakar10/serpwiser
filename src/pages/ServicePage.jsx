@@ -41,16 +41,16 @@ export default function ServicePage() {
   return (
     <main className="pt-0 pb-0">
       {/* Hero */}
-      <section className={`relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden bg-gradient-to-br ${gradient}`}>
+      <section className={`relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden bg-gradient-to-br ${gradient}`} aria-labelledby="service-title">
         <div className="absolute inset-0 bg-slate-900/20" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_100%,rgba(255,255,255,0.1),transparent)]" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="mb-6">
+          <nav className="mb-6" aria-label="Breadcrumb">
             <Link to="/" className="text-white/80 hover:text-white text-sm font-medium transition-colors">Home</Link>
             <span className="mx-2 text-white/60">/</span>
             <span className="text-white font-medium">{service.title}</span>
           </nav>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight mb-6">
+          <h1 id="service-title" className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight mb-6">
             {service.title}
           </h1>
           <p className="text-lg md:text-xl text-white/90 max-w-2xl leading-relaxed">
@@ -61,11 +61,11 @@ export default function ServicePage() {
 
       {/* What we offer - card grid */}
       {service.subServices && service.subServices.length > 0 && (
-        <section className="py-16 md:py-24 bg-slate-50/50">
+        <section className="py-16 md:py-24 bg-slate-50/50" aria-labelledby="what-we-offer-heading">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-3 mb-10">
               <span className={`h-1 w-12 rounded-full bg-gradient-to-r ${gradient}`} />
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900">What we offer</h2>
+              <h2 id="what-we-offer-heading" className="text-2xl md:text-3xl font-bold text-slate-900">What we offer</h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {service.subServices.map((item, i) => (
@@ -87,11 +87,11 @@ export default function ServicePage() {
 
       {/* Benefits */}
       {service.benefits && service.benefits.length > 0 && (
-        <section className="py-16 md:py-24 bg-white">
+        <section className="py-16 md:py-24 bg-white" aria-labelledby="service-benefits-heading">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-3 mb-10">
               <span className={`h-1 w-12 rounded-full bg-gradient-to-r ${gradient}`} />
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Why choose us</h2>
+              <h2 id="service-benefits-heading" className="text-2xl md:text-3xl font-bold text-slate-900">Why choose us</h2>
             </div>
             <div className="flex flex-wrap gap-4">
               {service.benefits.map((b) => (
@@ -111,12 +111,12 @@ export default function ServicePage() {
       )}
 
       {/* CTA */}
-      <section className="py-16 md:py-24 bg-slate-900 relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-slate-900 relative overflow-hidden" aria-labelledby="service-cta-heading">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_70%_50%,rgba(6,182,212,0.15),transparent)]" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to get started?</h2>
+          <h2 id="service-cta-heading" className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to get started?</h2>
           <p className="text-slate-300 text-lg mb-8 max-w-xl mx-auto">
-            Let's discuss how we can help you achieve your goals with {service.title}.
+            Let&apos;s discuss how we can help you achieve your goals with {service.title}.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

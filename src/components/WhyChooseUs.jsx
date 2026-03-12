@@ -46,10 +46,10 @@ const items = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden bg-gradient-to-b from-slate-50/50 via-white to-sky-50/20">
+    <section id="why-choose-us" className="py-20 md:py-28 relative overflow-hidden bg-gradient-to-b from-slate-50/50 via-white to-sky-50/20" aria-labelledby="why-choose-us-heading">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionLabel>Our Process</SectionLabel>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-14">Partner with a team that delivers real results</h2>
+        <SectionLabel>Why Choose Us</SectionLabel>
+        <h2 id="why-choose-us-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-14">Partner with a team that delivers real results</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {items.map((item) => (
             <div

@@ -28,12 +28,13 @@ export default function CaseStudy() {
   }, []);
 
   return (
-    <main className="pt-24 pb-16">
+    <main className="pt-24 pb-16" aria-labelledby="case-studies-page-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2">Our Case Studies</p>
-        <h1 className="text-4xl font-bold text-slate-800 mb-6">
-          Explore our success stories and see how we've helped businesses grow.
+        <p className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2" aria-hidden="true">Our Case Studies</p>
+        <h1 id="case-studies-page-heading" className="text-4xl font-bold text-slate-800 mb-6">
+          Explore our success stories and see how we&apos;ve helped businesses grow.
         </h1>
+        <p className="text-slate-600 text-lg max-w-2xl mb-10">Real results from SEO, content marketing, PPC, and digital strategy projects.</p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cases.map((c) => (
             <article

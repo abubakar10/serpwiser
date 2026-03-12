@@ -39,7 +39,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-slate-900">
+    <header className="relative min-h-[90vh] flex items-center overflow-hidden bg-slate-900" aria-labelledby="hero-heading">
       {/* Rich gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-indigo-950/40 via-slate-900 to-cyan-950/30" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_80%_at_50%_-30%,rgba(6,182,212,0.25),transparent_50%)]" />
@@ -50,12 +50,12 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 w-full">
         <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
           <div>
-            <p className="text-cyan-400 font-semibold text-sm tracking-widest uppercase mb-5">SEO & Digital Marketing</p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.1] tracking-tight">
+            <p className="text-cyan-400 font-semibold text-sm tracking-widest uppercase mb-5" aria-hidden="true">SEO & Digital Marketing</p>
+            <h1 id="hero-heading" className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.1] tracking-tight">
               Digital marketing that drives
             </h1>
             <p className="mt-6 text-lg text-slate-300 max-w-xl leading-relaxed">
-              We help brands grow with data-driven strategies across SEO, content, and paid channels. Get more traffic, leads, and revenue.
+              We help brands grow with data-driven strategies across SEO, content marketing, and paid channels. Get more organic traffic, qualified leads, and revenue.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-3 max-w-lg">
               <input
@@ -87,6 +87,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </section>
+    </header>
   );
 }

@@ -57,13 +57,13 @@ const steps = [
 
 export default function HowWeWork() {
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50">
+    <section id="how-we-work" className="py-20 md:py-28 relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50" aria-labelledby="how-we-work-heading">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_30%_20%,rgba(14,165,233,0.05),transparent)]" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionLabel>Our Approach</SectionLabel>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-5">Our Approach to Delivering Results</h2>
+        <h2 id="how-we-work-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-5">Our Approach to Delivering Results</h2>
         <p className="text-slate-600 text-lg max-w-2xl mb-12 leading-relaxed">
-          We follow a proven process that combines research, strategy, and execution to deliver measurable growth for your business.
+          We follow a proven four-step process: strategy, execution, optimization, and reporting. This ensures measurable growth for your business through SEO, content, and paid channels.
         </p>
         <Link
           to="/contact"

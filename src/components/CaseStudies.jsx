@@ -36,12 +36,12 @@ export default function CaseStudies() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden bg-gradient-to-b from-slate-50/50 via-white to-slate-50/30">
+    <section id="case-studies" className="py-20 md:py-28 relative overflow-hidden bg-gradient-to-b from-slate-50/50 via-white to-slate-50/30" aria-labelledby="case-studies-heading">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_50%_at_70%_30%,rgba(14,165,233,0.05),transparent)]" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionLabel>Case Studies</SectionLabel>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-          Explore our success stories and see how we've helped businesses grow.
+        <h2 id="case-studies-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+          Explore our success stories and see how we&apos;ve helped businesses grow.
         </h2>
         <div className="relative">
           <div className="grid md:grid-cols-3 gap-6">
@@ -58,11 +58,11 @@ export default function CaseStudies() {
                 <div className={`aspect-[4/3] bg-gradient-to-br ${c.gradient} flex flex-col items-center justify-center p-8 relative overflow-hidden`}>
                   <div className="absolute inset-0 bg-black/10" />
                   <div className="relative w-20 h-20 rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center mb-4 shadow-section">
-                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                     </svg>
                   </div>
-                  <p className="relative text-white font-bold text-lg">{c.title}</p>
+                  <h3 className="relative text-white font-bold text-lg">{c.title}</h3>
                   <p className="relative text-white/90 text-sm mt-1">{c.subtitle}</p>
                 </div>
                 <div className="p-6 bg-white">

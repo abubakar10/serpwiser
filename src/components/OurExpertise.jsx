@@ -19,7 +19,7 @@ const ImageSectionCard = ({ gradient, title, subtitle, icon }) => (
         </div>
       </div>
       <div className="relative mt-auto">
-        <p className="text-white/90 font-bold text-lg">{title}</p>
+        <h3 className="text-white/90 font-bold text-lg">{title}</h3>
         <p className="text-white/70 text-sm mt-0.5">{subtitle}</p>
       </div>
     </div>
@@ -28,11 +28,11 @@ const ImageSectionCard = ({ gradient, title, subtitle, icon }) => (
 
 export default function OurExpertise() {
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden bg-gradient-to-b from-sky-50/30 via-white to-slate-50/50">
+    <section id="our-expertise" className="py-20 md:py-28 relative overflow-hidden bg-gradient-to-b from-sky-50/30 via-white to-slate-50/50" aria-labelledby="our-expertise-heading">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_80%_60%,rgba(99,102,241,0.05),transparent)]" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionLabel>About Us</SectionLabel>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-8 max-w-2xl leading-tight">
+        <h2 id="our-expertise-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-8 max-w-2xl leading-tight">
           We provide comprehensive digital marketing solutions that help businesses thrive.
         </h2>
         <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">

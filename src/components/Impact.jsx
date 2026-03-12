@@ -15,13 +15,13 @@ const metrics = [
 
 export default function Impact() {
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+    <section id="impact" className="py-20 md:py-28 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden" aria-labelledby="impact-heading">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(6,182,212,0.2),transparent)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_80%_at_80%_80%,rgba(99,102,241,0.1),transparent)]" />
       <div className="absolute inset-0 grain" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionLabel>Why Choose Us</SectionLabel>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-14 max-w-2xl leading-tight">
+        <SectionLabel>Our Results</SectionLabel>
+        <h2 id="impact-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-14 max-w-2xl leading-tight">
           We are passionate about helping businesses grow online.
         </h2>
         <div className="grid md:grid-cols-3 gap-12 lg:gap-16 mb-14">

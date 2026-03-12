@@ -28,15 +28,15 @@ const icons = {
 
 export default function WhatWeDo() {
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-sky-50/30">
+    <section id="what-we-do" className="py-20 md:py-28 relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-sky-50/30" aria-labelledby="what-we-do-heading">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(14,165,233,0.06),transparent)]" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionLabel>What we do</SectionLabel>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-5 max-w-3xl leading-tight">
+        <h2 id="what-we-do-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-5 max-w-3xl leading-tight">
           Comprehensive Digital Marketing Services to Boost Your Business Growth
         </h2>
         <p className="text-slate-600 text-lg max-w-2xl mb-10 leading-relaxed">
-          We offer a full suite of digital marketing solutions designed to increase your online visibility, engage your audience, and drive measurable results.
+          We offer a full suite of digital marketing solutions—including SEO, content marketing, PPC, and web design—designed to increase your online visibility, engage your audience, and drive measurable results.
         </p>
         <Link
           to="/services/seo"

@@ -10,6 +10,14 @@ Digital marketing agency website built with React, Tailwind CSS, and Vite. Fully
 - **Case Study** and **Contact** pages
 - **Privacy** and **Terms** placeholder pages
 - Responsive layout (mobile, tablet, desktop) with mobile hamburger menu
+- **SEO**: Per-page meta (title, description, canonical), Open Graph & Twitter Cards, JSON-LD (Organization, WebSite, BreadcrumbList, Service), sitemap.xml, robots.txt, semantic HTML, skip link
+
+## SEO
+
+- **Per-route meta**: Each page has a unique `<title>`, `<meta name="description">`, and canonical URL via `react-helmet-async`.
+- **Open Graph & Twitter**: Shared links get correct title, description, and image (set `VITE_SITE_URL` and add `/public/og-image.png` for best results).
+- **Structured data**: Home has Organization + WebSite schema; service pages have BreadcrumbList + Service schema.
+- **Sitemap & robots**: `public/sitemap.xml` and `public/robots.txt` are included. For a custom domain, set **Build environment variable** in Netlify: `VITE_SITE_URL=https://yourdomain.com` and update the domain in `public/sitemap.xml` and `public/robots.txt` to match.
 
 ## Tech Stack
 

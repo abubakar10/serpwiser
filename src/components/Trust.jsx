@@ -10,9 +10,13 @@ const logos = ["Sordis", "DroneJet", "TechFlow", "Nexus", "Vertex", "Apex"];
 
 export default function Trust() {
   return (
-    <section className="py-20 md:py-28 bg-slate-50/50 border-t border-slate-200/80">
+    <section id="trusted-by" className="py-20 md:py-28 bg-slate-50/50 border-t border-slate-200/80" aria-labelledby="trusted-by-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionLabel>Trusted by Industry Leaders</SectionLabel>
+        <h2 id="trusted-by-heading" className="text-center text-xs font-bold text-slate-500 uppercase tracking-[0.2em] mb-8 flex items-center justify-center gap-3">
+          <span className="h-px w-8 bg-slate-400 rounded-full" />
+          Trusted by Industry Leaders
+          <span className="h-px w-8 bg-slate-400 rounded-full" />
+        </h2>
         <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
           {logos.map((name) => (
             <div

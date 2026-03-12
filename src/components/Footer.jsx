@@ -53,7 +53,7 @@ export default function Footer() {
             <p className="text-slate-400 text-[15px] leading-relaxed">Digital marketing that drives results.</p>
           </div>
           <div>
-            <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider">Company</h4>
+            <h2 className="font-bold text-white mb-5 text-sm uppercase tracking-wider">Company</h2>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.to}>
@@ -65,7 +65,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider">Services</h4>
+            <h2 className="font-bold text-white mb-5 text-sm uppercase tracking-wider">Services</h2>
             <ul className="space-y-3">
               {serviceLinks.map((link) => (
                 <li key={link.to}>
@@ -77,7 +77,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider">Company</h4>
+            <h2 className="font-bold text-white mb-5 text-sm uppercase tracking-wider">Legal</h2>
             <ul className="space-y-3">
               {companyLinks.map((link) => (
                 <li key={link.to}>
@@ -89,7 +89,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider">Resources</h4>
+            <h2 className="font-bold text-white mb-5 text-sm uppercase tracking-wider">Resources</h2>
             <ul className="space-y-3">
               {resourceLinks.map((link) => (
                 <li key={link.to}>

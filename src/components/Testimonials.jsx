@@ -26,8 +26,9 @@ export default function Testimonials() {
   const t = testimonials[index];
 
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden bg-gradient-to-b from-slate-50/50 via-white to-sky-50/20">
+    <section id="testimonials" className="py-20 md:py-28 relative overflow-hidden bg-gradient-to-b from-slate-50/50 via-white to-sky-50/20" aria-labelledby="testimonials-heading">
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 id="testimonials-heading" className="text-3xl sm:text-4xl font-bold text-slate-900 mb-12">What our clients say about us</h2>
         <div className="bg-white rounded-2xl shadow-section border border-slate-200/80 p-8 md:p-12 relative">
           <button
             type="button"

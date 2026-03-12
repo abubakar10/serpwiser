@@ -13,9 +13,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <section id="what-we-do">
-        <WhatWeDo />
-      </section>
+      <WhatWeDo />
       <HowWeWork />
       <OurExpertise />
       <WhyChooseUs />
@@ -23,9 +21,7 @@ export default function Home() {
       <Impact />
       <Trust />
       <ContactSection />
-      <section id="testimonials">
-        <Testimonials />
-      </section>
+      <Testimonials />
     </>
   );
 }
