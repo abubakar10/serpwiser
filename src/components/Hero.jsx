@@ -39,7 +39,7 @@ export default function Hero() {
   };
 
   return (
-    <header className="relative min-h-[90vh] flex items-center overflow-hidden bg-slate-900" aria-labelledby="hero-heading">
+    <header className="hero-banner relative min-h-[90vh] flex items-center overflow-hidden bg-slate-900" aria-labelledby="hero-heading">
       {/* Rich gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-indigo-950/40 via-slate-900 to-cyan-950/30" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_80%_at_50%_-30%,rgba(6,182,212,0.25),transparent_50%)]" />
@@ -57,19 +57,19 @@ export default function Hero() {
             <p className="mt-6 text-lg text-slate-200 max-w-xl leading-relaxed">
               We help brands grow with data-driven strategies across SEO, content marketing, and paid channels. Get more organic traffic, qualified leads, and revenue.
             </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-3 max-w-lg">
+            <div className="mt-10 flex flex-col sm:flex-row gap-3 max-w-lg min-w-0">
               <input
                 type="text"
                 placeholder="Enter your website URL..."
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleStart()}
-                className="flex-1 px-5 py-4 rounded-xl border border-white/20 bg-white/5 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all shadow-glow-cyan"
+                className="flex-1 min-w-0 px-5 py-4 rounded-xl border border-white/20 bg-white/5 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all shadow-glow-cyan"
               />
               <button
                 type="button"
                 onClick={handleStart}
-                className="px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-500 text-slate-900 font-bold hover:from-cyan-400 hover:to-sky-400 transition-all duration-200 shadow-glow-cyan hover:-translate-y-0.5 shrink-0"
+                className="shrink-0 px-6 sm:px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-500 text-slate-900 font-bold hover:from-cyan-400 hover:to-sky-400 transition-all duration-200 shadow-glow-cyan hover:-translate-y-0.5"
                 aria-label="Get started and go to contact"
               >
                 Get Started

@@ -16,15 +16,15 @@
       #root{min-height:100vh;display:flex;flex-direction:column}
       .skip-link{position:absolute;top:-100px;left:50%;transform:translateX(-50%);z-index:9999;padding:.75rem 1.5rem;background:#0f172a;color:#fff;font-weight:600;border-radius:.5rem}
       .skip-link:focus{top:1rem;outline:2px solid #0ea5e9;outline-offset:2px}
-      /* Hero / LCP - above-the-fold so LCP is styled without blocking CSS */
-      header.relative{min-height:90vh;display:flex;align-items:center;overflow:hidden;background:#0f172a}
-      header .relative{position:relative;max-width:80rem;margin:0 auto;padding:6rem 1rem;width:100%}
-      header h1{font-size:clamp(2.25rem,5vw,4rem);font-weight:700;color:#fff;line-height:1.1;letter-spacing:-0.02em}
-      header p.text-slate-200{color:#e2e8f0}
-      header input{background:rgba(255,255,255,.05);color:#fff;border:1px solid rgba(255,255,255,.2);border-radius:.75rem;padding:1rem 1.25rem}
-      header button.rounded-xl{border-radius:.75rem;padding:1rem 2rem;font-weight:700}
-      /* Fixed header bar */
-      .fixed.top-0{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.8);backdrop-filter:blur(24px);border-bottom:1px solid rgba(226,232,240,.6)}
+      /* Hero / LCP - above-the-fold only; full styles from main CSS */
+      .hero-banner{min-height:90vh;display:flex;align-items:center;overflow:hidden;background:#0f172a}
+      .hero-banner .relative{position:relative;max-width:80rem;margin:0 auto;padding:6rem 1rem;width:100%}
+      .hero-banner h1{font-size:clamp(2.25rem,5vw,4rem);font-weight:700;color:#fff;line-height:1.1;letter-spacing:-0.02em}
+      .hero-banner p{color:#e2e8f0}
+      .hero-banner input{background:rgba(255,255,255,.05);color:#fff;border:1px solid rgba(255,255,255,.2);border-radius:.75rem;padding:1rem 1.25rem}
+      .hero-banner button.rounded-xl{border-radius:.75rem;padding:1rem 2rem;font-weight:700}
+      /* Nav bar - first paint only */
+      .site-header.fixed{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(24px);border-bottom:1px solid rgba(226,232,240,.6)}
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

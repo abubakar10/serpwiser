@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { navServices } from "../data/services";
 
@@ -23,9 +23,18 @@ export default function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const closeTimeoutRef = React.useRef(null);
+
+  const handleDropdownEnter = () => {
+    if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
+    setDropdownOpen(true);
+  };
+  const handleDropdownLeave = () => {
+    closeTimeoutRef.current = setTimeout(() => setDropdownOpen(false), 120);
+  };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/60 shadow-sm">
+    <header className="site-header fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200/60 shadow-sm">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 md:h-20">
           <Link to="/" className="flex items-center gap-2.5 shrink-0 group">
@@ -37,8 +46,8 @@ export default function Header() {
             <NavLink to="/">Home</NavLink>
             <div
               className="relative"
-              onMouseEnter={() => setDropdownOpen(true)}
-              onMouseLeave={() => setDropdownOpen(false)}
+              onMouseEnter={handleDropdownEnter}
+              onMouseLeave={handleDropdownLeave}
             >
               <button
                 type="button"
@@ -49,22 +58,28 @@ export default function Header() {
                 data-open={dropdownOpen || undefined}
               >
                 What we do
-                <svg className={`w-4 h-4 transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className={`w-4 h-4 shrink-0 transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               {dropdownOpen && (
-                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-[min(92vw,780px)]">
-                  <div className="bg-white rounded-2xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.15)] border border-slate-200/90 overflow-hidden">
+                <>
+                  <div
+                    className="fixed inset-0 z-40 bg-slate-900/10 backdrop-blur-[2px]"
+                    aria-hidden="true"
+                    onClick={() => { if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current); setDropdownOpen(false); }}
+                  />
+                  <div className="fixed top-[4.5rem] right-4 left-4 z-50 flex justify-end md:left-auto md:right-8">
+                    <div className="w-full max-w-[720px] min-w-[320px] rounded-2xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.2)] border border-slate-200/90 overflow-hidden ring-1 ring-slate-200/50 bg-white shrink-0">
                     <div className="h-1 bg-gradient-to-r from-sky-500 via-cyan-500 to-violet-500" />
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-0">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-0">
                       {navServices.map((col, colIndex) => {
                         const accent = colIndex === 0 ? "sky" : colIndex === 1 ? "violet" : "amber";
                         const accentBg = accent === "sky" ? "from-sky-500 to-cyan-500" : accent === "violet" ? "from-violet-500 to-purple-500" : "from-amber-500 to-orange-500";
                         return (
-                          <div key={col.title} className="p-5 md:py-6 md:px-6 md:border-r border-slate-100 last:border-r-0">
+                          <div key={col.title} className="p-5 md:py-6 md:px-6 md:border-r border-slate-100 last:border-r-0 min-w-[170px]">
                             <div className="flex items-center gap-2 mb-4">
-                              <span className={`h-1 w-6 rounded-full bg-gradient-to-r ${accentBg}`} />
+                              <span className={`h-1 w-6 rounded-full shrink-0 bg-gradient-to-r ${accentBg}`} />
                               <p className="text-[11px] font-bold text-slate-600 uppercase tracking-[0.2em]">
                                 {col.title}
                               </p>
@@ -88,7 +103,7 @@ export default function Header() {
                           </div>
                         );
                       })}
-                      <div className="md:col-span-1 flex flex-col justify-center p-6 bg-gradient-to-br from-slate-900 to-slate-800">
+                      <div className="md:col-span-1 flex flex-col justify-center p-6 bg-gradient-to-br from-slate-900 to-slate-800 min-w-[180px]">
                         <p className="text-white font-bold text-base leading-snug mb-2">
                           Need help choosing?
                         </p>
@@ -98,11 +113,11 @@ export default function Header() {
                         <button
                           type="button"
                           onClick={() => { setDropdownOpen(false); navigate("/contact"); }}
-                          className="inline-flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl bg-cyan-500 text-slate-900 font-semibold hover:bg-cyan-400 transition-all duration-200 shadow-lg shadow-cyan-500/30"
+                          className="inline-flex items-center justify-center gap-2 w-full py-3 px-5 rounded-xl bg-cyan-500 text-slate-900 font-semibold hover:bg-cyan-400 transition-all duration-200 shadow-lg shadow-cyan-500/30 whitespace-nowrap"
                           aria-label="Contact"
                         >
                           Contact us
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                           </svg>
                         </button>
@@ -110,6 +125,7 @@ export default function Header() {
                     </div>
                   </div>
                 </div>
+                </>
               )}
             </div>
             <NavLink to="/case-study">Case Study</NavLink>
