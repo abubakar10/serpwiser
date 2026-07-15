@@ -11,6 +11,8 @@ const CaseStudy = lazy(() => import("./pages/CaseStudy"));
 const ServicePage = lazy(() => import("./pages/ServicePage"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
+const HomeServices = lazy(() => import("./pages/HomeServices"));
+const LawFirms = lazy(() => import("./pages/LawFirms"));
 
 function PageFallback() {
   return <div className="min-h-[60vh]" aria-hidden="true" />;
@@ -32,6 +34,8 @@ function App() {
                 <Route path="/services/:slug" element={<ServicePage />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
+                <Route path="/home-services" element={<HomeServices />} />
+                <Route path="/law-firms" element={<LawFirms />} />
               </Routes>
             </Suspense>
           </main>
