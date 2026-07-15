@@ -8,9 +8,9 @@ const SectionLabel = ({ children }) => (
 );
 
 const metrics = [
-  { value: 98, label: "Client Satisfaction", suffix: "%" },
-  { value: 95, label: "Project Success", suffix: "%" },
-  { value: 99, label: "ROI Growth", suffix: "%" },
+  { value: 94, label: "Client Retention Rate", suffix: "%" },
+  { value: 30, label: "Days to See Results", suffix: "" },
+  { value: 70, label: "Map Pack Click Share", suffix: "%" },
 ];
 
 export default function Impact() {
@@ -21,9 +21,10 @@ export default function Impact() {
       <div className="absolute inset-0 grain" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionLabel>Our Results</SectionLabel>
-        <h2 id="impact-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-14 max-w-2xl leading-tight">
-          We are passionate about helping businesses grow online.
+        <h2 id="impact-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 max-w-2xl leading-tight">
+          Real numbers. Real rankings. Real new customers.
         </h2>
+        <p className="text-slate-300 text-lg mb-14 max-w-2xl">We measure success one way — did your phone ring more this month than last month?</p>
         <div className="grid md:grid-cols-3 gap-12 lg:gap-16 mb-14">
           {metrics.map((m, idx) => (
             <div key={m.label} className="flex flex-col items-center">
@@ -51,17 +52,20 @@ export default function Impact() {
                   {m.value}{m.suffix}
                 </span>
               </div>
-              <p className="mt-5 font-semibold text-white/90 text-lg">{m.label}</p>
+              <p className="mt-5 font-semibold text-white/90 text-lg text-center">{m.label}</p>
             </div>
           ))}
         </div>
         <div className="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-5 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.3)]">
-          <p className="text-white font-semibold text-lg md:text-xl">Ready to Get Started?</p>
+          <div>
+            <p className="text-white font-semibold text-lg md:text-xl">Ready to get into the Google Maps top 3?</p>
+            <p className="text-slate-300 text-sm mt-1">Month to month. No contracts. Results in 30 days.</p>
+          </div>
           <Link
             to="/contact"
-            className="px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-500 text-slate-900 font-bold hover:from-cyan-400 hover:to-sky-400 transition-all duration-200 shadow-glow-cyan hover:-translate-y-0.5 shrink-0"
+            className="shrink-0 px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-500 text-slate-900 font-bold hover:from-cyan-400 hover:to-sky-400 transition-all duration-200 shadow-glow-cyan hover:-translate-y-0.5"
           >
-            Get a Quote
+            Get Started Today
           </Link>
         </div>
       </div>
