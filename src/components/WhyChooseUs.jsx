@@ -9,11 +9,20 @@ const items = [
   {
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
       </svg>
     ),
-    title: "Expertise",
-    description: "Our experts bring years of industry experience and stay ahead of the latest trends and algorithms.",
+    title: "Specialists, Not Generalists",
+    description: "We only do local SEO and Google Business Profile optimization. Not websites, not social media, not ads. This laser focus is why we get results consistently.",
+  },
+  {
+    icon: (
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+      </svg>
+    ),
+    title: "Month to Month — Always",
+    description: "No 6-month contracts. No annual lock-ins. You stay because it is working, not because you are stuck. Cancel any time with no questions asked.",
   },
   {
     icon: (
@@ -21,26 +30,17 @@ const items = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
       </svg>
     ),
-    title: "Innovation",
-    description: "We focus on data and outcomes. Our clients see real improvements in traffic, leads, and revenue.",
+    title: "100% Done For You",
+    description: "Once you approve our access, you never need to log in or post anything. We handle your listing every single week — not once a month and forget.",
   },
   {
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
       </svg>
     ),
-    title: "Collaboration",
-    description: "Get clear, regular reports and access to dashboards so you're never in the dark about performance.",
-  },
-  {
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
-    title: "Transparency",
-    description: "No one-size-fits-all. Every strategy is tailored to your goals, audience, and budget.",
+    title: "Transparent Monthly Reports",
+    description: "Every month you get a ranking report showing exactly where you were and where you are now — with screenshots. Real numbers, no fluff, no vague updates.",
   },
 ];
 
@@ -49,23 +49,18 @@ export default function WhyChooseUs() {
     <section id="why-choose-us" className="py-20 md:py-28 relative overflow-hidden bg-gradient-to-b from-slate-50/50 via-white to-sky-50/20" aria-labelledby="why-choose-us-heading">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionLabel>Why Choose Us</SectionLabel>
-        <h2 id="why-choose-us-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-14">Partner with a team that delivers real results</h2>
+        <h2 id="why-choose-us-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-14">The agency built for local businesses that want to rank on Maps</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {items.map((item) => (
             <div
               key={item.title}
               className="group relative bg-white rounded-2xl border border-slate-200/80 p-6 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="absolute top-5 right-5 w-9 h-9 rounded-xl bg-slate-100 flex items-center justify-center text-sky-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-500 to-cyan-500 text-white flex items-center justify-center mb-6 shadow-lg shadow-sky-500/30">
+              <div className="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600 mb-4">
                 {item.icon}
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
-              <p className="text-slate-600 text-[15px] leading-relaxed">{item.description}</p>
+              <h3 className="font-bold text-slate-900 mb-2 text-lg">{item.title}</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>
