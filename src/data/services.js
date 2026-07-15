@@ -1,26 +1,26 @@
 export const navServices = [
   {
-    title: "Optimization Services",
+    title: "Google Maps Ranking",
     items: [
-      { name: "Search Engine Optimization", path: "/services/seo", slug: "seo" },
-      { name: "Ecommerce SEO", path: "/services/ecommerce-seo", slug: "ecommerce-seo" },
-      { name: "Generative Engine Optimization", path: "/services/geo", slug: "geo" },
+      { name: "GBP Optimization", path: "/services/gbp-optimization", slug: "gbp-optimization" },
+      { name: "Map Pack Ranking", path: "/services/map-pack-ranking", slug: "map-pack-ranking" },
+      { name: "Review Generation", path: "/services/review-generation", slug: "review-generation" },
     ],
   },
   {
-    title: "Web Design & Development",
+    title: "Local SEO",
     items: [
-      { name: "Website Development", path: "/services/website-development", slug: "website-development" },
-      { name: "WordPress Web Design", path: "/services/wordpress-design", slug: "wordpress-design" },
-      { name: "Shopify Web Design", path: "/services/shopify-design", slug: "shopify-design" },
+      { name: "Local SEO Services", path: "/services/local-seo", slug: "local-seo" },
+      { name: "Citation Building", path: "/services/citation-building", slug: "citation-building" },
+      { name: "Local Link Building", path: "/services/local-links", slug: "local-links" },
     ],
   },
   {
-    title: "Marketing & Design",
+    title: "Industries We Serve",
     items: [
-      { name: "Social Media Marketing", path: "/services/social-media", slug: "social-media" },
-      { name: "Google Ads / PPC", path: "/services/ppc", slug: "ppc" },
-      { name: "Logo Design", path: "/services/logo-design", slug: "logo-design" },
+      { name: "Home Services", path: "/home-services", slug: "home-services" },
+      { name: "Law Firms", path: "/law-firms", slug: "law-firms" },
+      { name: "All Local Businesses", path: "/contact", slug: "contact" },
     ],
   },
 ];
@@ -28,31 +28,31 @@ export const navServices = [
 export const homeServices = [
   {
     icon: "chart",
-    title: "SEO Services",
-    description: "Improve your search rankings and organic traffic with our data-driven SEO strategies.",
-    path: "/services/seo",
-  },
-  {
-    icon: "megaphone",
-    title: "Content Marketing",
-    description: "Engage your audience with compelling content that drives conversions and builds brand authority.",
-    path: "/services/content-marketing",
+    title: "Google Business Profile Optimization",
+    description: "We completely take over and optimize your GBP listing — categories, description, photos, posts, and review strategy. Done for you, every week.",
+    path: "/services/gbp-optimization",
   },
   {
     icon: "target",
-    title: "Social Media Marketing",
-    description: "Grow your presence and engagement across all major social platforms with targeted campaigns.",
-    path: "/services/social-media",
+    title: "Google Maps Top 3 Ranking",
+    description: "The top 3 results on Google Maps get 70% of all clicks and calls. We get your business into that Map Pack so customers call you, not your competitors.",
+    path: "/services/map-pack-ranking",
+  },
+  {
+    icon: "megaphone",
+    title: "Review Generation Strategy",
+    description: "Reviews are the biggest ranking factor on Google Maps. We build a simple, consistent system to grow your reviews — without it feeling awkward or forced.",
+    path: "/services/review-generation",
   },
 ];
 
 export const expertiseServices = [
-  { title: "SEO Services", path: "/services/seo", description: "Comprehensive search engine optimization to improve visibility and rankings." },
-  { title: "Content Marketing", path: "/services/content-marketing", description: "Strategic content that engages and converts your audience." },
-  { title: "Social Media Marketing", path: "/services/social-media", description: "Build and grow your brand across social platforms." },
-  { title: "PPC Advertising", path: "/services/ppc", description: "Targeted paid campaigns that deliver measurable ROI." },
-  { title: "Email Marketing", path: "/services/email-marketing", description: "Nurture leads and drive sales with automated email campaigns." },
-  { title: "Web Design & Development", path: "/services/website-development", description: "Modern, responsive websites that convert visitors." },
+  { title: "GBP Optimization", path: "/services/gbp-optimization", description: "Complete Google Business Profile setup, optimization, and ongoing management." },
+  { title: "Map Pack Ranking", path: "/services/map-pack-ranking", description: "Get your business into the Google Maps top 3 for your target keywords." },
+  { title: "Review Generation", path: "/services/review-generation", description: "Build a steady stream of genuine 5-star reviews the right way." },
+  { title: "Local Citation Building", path: "/services/citation-building", description: "Consistent NAP listings across the top directories to boost local authority." },
+  { title: "Home Services SEO", path: "/home-services", description: "Specialized GBP and local SEO for plumbers, HVAC, electricians, and roofers." },
+  { title: "Law Firm SEO", path: "/law-firms", description: "Google Maps ranking for personal injury, family law, and criminal defense firms." },
 ];
 
-export const seoSubServices = ["SEO Audit", "Keyword Research", "On-page SEO", "Off-page SEO", "Technical SEO"];
+export const seoSubServices = ["GBP Audit", "Keyword Research", "On-page Local SEO", "Citation Cleanup", "Review Management"];
