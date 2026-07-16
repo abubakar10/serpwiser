@@ -7,12 +7,11 @@ import RouteSEO from "./components/RouteSEO";
 
 const Home = lazy(() => import("./pages/Home"));
 const Contact = lazy(() => import("./pages/Contact"));
-const CaseStudy = lazy(() => import("./pages/CaseStudy"));
 const ServicePage = lazy(() => import("./pages/ServicePage"));
-const Privacy = lazy(() => import("./pages/Privacy"));
-const Terms = lazy(() => import("./pages/Terms"));
 const HomeServices = lazy(() => import("./pages/HomeServices"));
 const LawFirms = lazy(() => import("./pages/LawFirms"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const Terms = lazy(() => import("./pages/Terms"));
 
 function PageFallback() {
   return <div className="min-h-[60vh]" aria-hidden="true" />;
@@ -30,12 +29,12 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/case-study" element={<CaseStudy />} />
-                <Route path="/services/:slug" element={<ServicePage />} />
-                <Route path="/privacy" element={<Privacy />} />
-                <Route path="/terms" element={<Terms />} />
+                <Route path="/gbp-optimization" element={<ServicePage slug="gbp-optimization" />} />
+                <Route path="/local-seo" element={<ServicePage slug="local-seo" />} />
                 <Route path="/home-services" element={<HomeServices />} />
                 <Route path="/law-firms" element={<LawFirms />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
               </Routes>
             </Suspense>
           </main>
