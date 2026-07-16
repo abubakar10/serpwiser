@@ -6,8 +6,9 @@ import WhyChooseUs from "../components/WhyChooseUs";
 import CaseStudies from "../components/CaseStudies";
 import Impact from "../components/Impact";
 import Trust from "../components/Trust";
-import ContactSection from "../components/ContactSection";
 import Testimonials from "../components/Testimonials";
+import FAQ from "../components/FAQ";
+import ContactSection from "../components/ContactSection";
 
 export default function Home() {
   return (
@@ -20,8 +21,9 @@ export default function Home() {
       <CaseStudies />
       <Impact />
       <Trust />
-      <ContactSection />
       <Testimonials />
+      <FAQ />
+      <ContactSection />
     </>
   );
 }
