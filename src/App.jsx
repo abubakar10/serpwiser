@@ -7,7 +7,8 @@ import RouteSEO from "./components/RouteSEO";
 
 const Home = lazy(() => import("./pages/Home"));
 const Contact = lazy(() => import("./pages/Contact"));
-const ServicePage = lazy(() => import("./pages/ServicePage"));
+const GBPOptimization = lazy(() => import("./pages/GBPOptimization"));
+const LocalSEO = lazy(() => import("./pages/LocalSEO"));
 const HomeServices = lazy(() => import("./pages/HomeServices"));
 const LawFirms = lazy(() => import("./pages/LawFirms"));
 const Privacy = lazy(() => import("./pages/Privacy"));
@@ -29,8 +30,8 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/gbp-optimization" element={<ServicePage slug="gbp-optimization" />} />
-                <Route path="/local-seo" element={<ServicePage slug="local-seo" />} />
+                <Route path="/gbp-optimization" element={<GBPOptimization />} />
+                <Route path="/local-seo" element={<LocalSEO />} />
                 <Route path="/home-services" element={<HomeServices />} />
                 <Route path="/law-firms" element={<LawFirms />} />
                 <Route path="/privacy" element={<Privacy />} />
