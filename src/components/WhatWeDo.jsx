@@ -31,39 +31,33 @@ export default function WhatWeDo() {
     <section id="what-we-do" className="py-20 md:py-28 relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-sky-50/30" aria-labelledby="what-we-do-heading">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(14,165,233,0.06),transparent)]" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionLabel>What we do</SectionLabel>
+        <SectionLabel>What We Do</SectionLabel>
         <h2 id="what-we-do-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-5 max-w-3xl leading-tight">
-          Comprehensive Digital Marketing Services to Boost Your Business Growth
+          Everything You Need to Dominate Google Maps in Your Area
         </h2>
         <p className="text-slate-600 text-lg max-w-2xl mb-10 leading-relaxed">
-          We offer a full suite of digital marketing solutions—including SEO, content marketing, PPC, and web design—designed to increase your online visibility, engage your audience, and drive measurable results.
+          We specialize in the three things that actually move local rankings — Google Business Profile optimization, review generation, and local authority building. No fluff. No paid ads. Just the work that gets your phone ringing.
         </p>
         <Link
-          to="/services/seo"
+          to="/contact"
           className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-sky-500 to-cyan-500 text-white font-semibold hover:from-sky-600 hover:to-cyan-600 transition-all duration-200 shadow-glow-sky hover:-translate-y-0.5 text-sm mb-14"
         >
-          Our Services
+          See All Services
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>
         </Link>
 
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-[14rem_1fr_1fr_1fr] gap-6 lg:gap-8">
-          {/* SEO panel – first column on lg, no overlap */}
           <div className="hidden lg:block w-full min-w-0 rounded-2xl p-6 shadow-section bg-gradient-to-br from-slate-800 via-slate-900 to-indigo-950 border border-slate-700/50 self-start">
             <div className="flex justify-between items-start mb-4">
-              <span className="text-sm font-semibold text-slate-200">SEO Services</span>
-              <button type="button" className="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 hover:scale-105 transition-all duration-200 text-slate-200 hover:text-white" aria-label="Close">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
+              <span className="text-sm font-semibold text-slate-200">What's Included</span>
             </div>
             <ul className="space-y-1 text-sm">
               {seoSubServices.map((item) => (
                 <li key={item}>
                   <Link
-                    to="/services/seo"
+                    to="/contact"
                     className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-200 hover:text-white hover:bg-white/10 transition-all duration-200 border border-transparent hover:border-cyan-500/30"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0" />
@@ -97,7 +91,7 @@ export default function WhatWeDo() {
                   className="inline-flex items-center gap-2 font-semibold text-sm transition-all duration-200 text-slate-800 hover:text-sky-600 hover:gap-3 underline-offset-4 hover:underline"
                   aria-label={`Read more about ${service.title}`}
                 >
-                  Read more about {service.title}
+                  Learn more
                   <svg className="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
