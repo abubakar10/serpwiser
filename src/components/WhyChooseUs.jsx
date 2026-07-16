@@ -13,7 +13,7 @@ const items = [
       </svg>
     ),
     title: "Specialists, Not Generalists",
-    description: "We only do local SEO and Google Business Profile optimization. Not websites, not social media, not ads. This laser focus is why we get results consistently.",
+    description: "We only do local SEO and Google Business Profile optimization. Not social media management, not paid ads, not brand strategy. This single-minded focus is why we get results consistently.",
   },
   {
     icon: (
@@ -49,7 +49,9 @@ export default function WhyChooseUs() {
     <section id="why-choose-us" className="py-20 md:py-28 relative overflow-hidden bg-gradient-to-b from-slate-50/50 via-white to-sky-50/20" aria-labelledby="why-choose-us-heading">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionLabel>Why Choose Us</SectionLabel>
-        <h2 id="why-choose-us-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-14">The agency built for local businesses that want to rank on Maps</h2>
+        <h2 id="why-choose-us-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-14">
+          The agency built for local businesses that want to rank on Maps
+        </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {items.map((item) => (
             <div
