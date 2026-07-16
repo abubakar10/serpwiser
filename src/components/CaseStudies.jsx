@@ -1,14 +1,14 @@
 export default function CaseStudies() {
   const clients = [
-    "Stanley Steemer",
-    "Advantage Air",
-    "Double Time Garage Doors",
-    "Hack's Plumbing",
-    "Setareh Law",
-    "AirDoctor X",
-    "Classic Coating",
-    "Lafata Law",
-    "Estate Planning Attorney",
+    { name: "Stanley Steemer", file: "stanley-steemer.png", bg: "bg-yellow-50" },
+    { name: "Advantage Air", file: "advantage-air.png", bg: "bg-white" },
+    { name: "Double Time Garage Doors", file: "double-time.png", bg: "bg-white" },
+    { name: "Hack's Plumbing", file: "hacks-plumbing.png", bg: "bg-white" },
+    { name: "Setareh Law Group", file: "setareh-law.png", bg: "bg-white" },
+    { name: "AirDoctor X", file: "airdoctor-x.png", bg: "bg-white" },
+    { name: "Classic Coating", file: "classic-coating.png", bg: "bg-white" },
+    { name: "Lafata Law", file: "lafata-law.png", bg: "bg-slate-800" },
+    { name: "Estate Planning Attorney", file: "estate-planning.png", bg: "bg-white" },
   ];
 
   const all = [...clients, ...clients];
@@ -29,17 +29,22 @@ export default function CaseStudies() {
 
         <div
           className="flex gap-6 w-max"
-          style={{ animation: "marquee 30s linear infinite" }}
+          style={{ animation: "marquee 35s linear infinite" }}
         >
-          {all.map((name, i) => (
+          {all.map((client, i) => (
             <div
               key={i}
-              className="flex items-center gap-3 px-6 py-3 rounded-xl bg-white/5 border border-white/10 whitespace-nowrap"
+              className={`flex items-center justify-center px-6 py-3 rounded-xl ${client.bg} border border-white/10 whitespace-nowrap h-16 min-w-[160px]`}
             >
-              <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-cyan-500 to-sky-600 flex items-center justify-center text-white font-bold text-xs shrink-0">
-                {name.charAt(0)}
-              </div>
-              <span className="text-white font-semibold text-sm">{name}</span>
+              <img
+                src={`/${client.file}`}
+                alt={`${client.name} logo`}
+                className="h-10 max-w-[140px] object-contain"
+                onError={(e) => {
+                  e.target.style.display = "none";
+                  e.target.parentNode.innerHTML = `<span class="text-white font-semibold text-sm">${client.name}</span>`;
+                }}
+              />
             </div>
           ))}
         </div>
