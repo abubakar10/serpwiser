@@ -27,22 +27,28 @@ export const navServices = [
 
 export const homeServices = [
   {
-    icon: "chart",
+    icon: "gbp",
     title: "Google Business Profile Optimization",
     description: "We completely take over and optimize your GBP listing — categories, description, photos, posts, and review strategy. Done for you, every week.",
     path: "/services/gbp-optimization",
   },
   {
-    icon: "target",
+    icon: "maps",
     title: "Google Maps Top 3 Ranking",
     description: "The top 3 results on Google Maps get 70% of all clicks and calls. We get your business into that Map Pack so customers call you, not your competitors.",
     path: "/services/map-pack-ranking",
   },
   {
-    icon: "megaphone",
+    icon: "reviews",
     title: "Review Generation Strategy",
     description: "Reviews are the biggest ranking factor on Google Maps. We build a simple, consistent system to grow your reviews — without it feeling awkward or forced.",
     path: "/services/review-generation",
+  },
+  {
+    icon: "seo",
+    title: "Full Local SEO Package",
+    description: "Our complete package covers keyword research, on-page SEO, technical SEO, service pages for your website, and off-page link building — everything to dominate both Maps and organic search.",
+    path: "/services/local-seo",
   },
 ];
 
