@@ -1,7 +1,6 @@
 import Hero from "../components/Hero";
 import WhatWeDo from "../components/WhatWeDo";
 import HowWeWork from "../components/HowWeWork";
-import OurExpertise from "../components/OurExpertise";
 import WhyChooseUs from "../components/WhyChooseUs";
 import CaseStudies from "../components/CaseStudies";
 import Impact from "../components/Impact";
@@ -16,7 +15,6 @@ export default function Home() {
       <Hero />
       <WhatWeDo />
       <HowWeWork />
-      <OurExpertise />
       <WhyChooseUs />
       <CaseStudies />
       <Impact />
