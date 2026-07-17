@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const LogoIcon = () => (
-  <svg className="w-7 h-7 text-cyan-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" width="28" height="28">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 13h6V3H3v10zm0 8h6v-6H3v6zm8-18v10h10V3H11zm0 18h10v-6H11v6z" />
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 11l3 3 6-6" />
-  </svg>
+const Logo = () => (
+  <img src="/serp-wiser-icon.png" alt="SERP Wiser" className="w-8 h-8 shrink-0" />
 );
 
 const ChevronDown = ({ open }) => (
@@ -87,9 +84,13 @@ export default function Header() {
     <header className="site-header fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200/60 shadow-sm">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 md:h-20">
+
           <Link to="/" className="flex items-center gap-2.5 shrink-0 group">
-            <LogoIcon />
-            <span className="font-bold text-xl text-slate-900 tracking-tight group-hover:text-slate-700 transition-colors">SERP WISER</span>
+            <Logo />
+            <span className="font-bold text-xl tracking-tight">
+              <span className="text-slate-900 group-hover:text-slate-700 transition-colors">SERP </span>
+              <span className="text-cyan-500">Wiser</span>
+            </span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">
