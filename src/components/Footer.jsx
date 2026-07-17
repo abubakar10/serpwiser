@@ -29,10 +29,11 @@ export default function Footer() {
 
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-2.5 mb-5" aria-label="SERP Wiser home">
-              <svg className="w-7 h-7 text-cyan-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" width="28" height="28">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 13h6V3H3v10zm0 8h6v-6H3v6zm8-18v10h10V3H11zm0 18h10v-6H11v6z" />
-              </svg>
-              <span className="font-bold text-xl text-white">SERP WISER</span>
+              <img src="/serp-wiser-icon.png" alt="SERP Wiser" className="w-8 h-8 shrink-0" />
+              <span className="font-bold text-xl tracking-tight">
+                <span className="text-white">SERP </span>
+                <span className="text-cyan-400">Wiser</span>
+              </span>
             </Link>
             <p className="text-slate-400 text-[15px] leading-relaxed mb-6">
               Local SEO and Google Business Profile optimization for local businesses. We get you into the Google Maps top 3.
