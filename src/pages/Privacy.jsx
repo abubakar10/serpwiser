@@ -75,6 +75,11 @@ export default function Privacy() {
             <p>To exercise any of these rights, email us at info@serpwiser.com. We will respond within 30 days.</p>
           </Section>
 
+          <Section title="SMS Communications">
+            <p>By providing your phone number, you consent to receive text messages from SERP Wiser related to your inquiry, appointments, and service updates. Message and data rates may apply, and message frequency may vary. You can opt out at any time by replying STOP to any message, or get help by replying HELP.</p>
+            <p>We do not share your mobile information with third parties or affiliates for marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties.</p>
+          </Section>
+
           <Section title="Data Security">
             <p>We take reasonable measures to protect the information we collect from unauthorized access, use, or disclosure. However, no method of internet transmission is 100% secure and we cannot guarantee absolute security of your data.</p>
           </Section>
