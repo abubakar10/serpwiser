@@ -55,6 +55,12 @@ export default function Terms() {
             <p>Any case studies, testimonials, or examples of past results shared on our website are illustrative and not a guarantee of future performance.</p>
           </Section>
 
+          <Section title="SMS Terms">
+            <p>By opting in to receive text messages from SERP Wiser, you agree to receive recurring messages related to your inquiry, appointments, and service updates. Message frequency varies. Message and data rates may apply.</p>
+            <p>You can cancel text messages at any time by replying STOP. After you send STOP, we will send a confirmation message and you will not receive further messages unless you opt in again. For help at any time, reply HELP or contact info@serpwiser.com.</p>
+            <p>Carriers are not liable for delayed or undelivered messages. Participation is not a condition of any purchase.</p>
+          </Section>
+
           <Section title="Client Responsibilities">
             <p>To enable us to deliver our services effectively, clients agree to:</p>
             <ul className="list-disc pl-5 space-y-1 mt-2">
