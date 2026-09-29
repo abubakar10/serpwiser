@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const FORMSPREE_URL = "https://formspree.io/f/maqpelry";
 
@@ -115,6 +116,18 @@ export default function ContactSection() {
                   Something went wrong. Please try again or email us at info@serpwiser.com
                 </p>
               )}
+              <div className="flex items-start gap-2.5">
+                <input
+                  id="smsConsent" name="smsConsent" type="checkbox" required
+                  className="mt-1 w-4 h-4 rounded border-slate-300 text-cyan-600 focus:ring-cyan-500/30 shrink-0"
+                />
+                <label htmlFor="smsConsent" className="text-xs text-slate-500 leading-relaxed">
+                  I agree to receive calls, texts, and emails from SERP Wiser regarding my inquiry, including account updates. Message and data rates may apply. Message frequency varies. Reply STOP to opt out at any time and HELP for help. Consent is not a condition of purchase. View our{" "}
+                  <Link to="/privacy" className="text-cyan-600 hover:underline">Privacy Policy</Link>{" "}
+                  and{" "}
+                  <Link to="/terms" className="text-cyan-600 hover:underline">Terms</Link>.
+                </label>
+              </div>
               <button
                 type="submit"
                 disabled={status === "submitting"}
